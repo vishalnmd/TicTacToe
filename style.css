@@ -1,0 +1,71 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.navBar{
+    height: 2rem;
+    display: flex;
+    background-color: #4F3973;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.navBar a{
+    color: white;
+    text-decoration: none;
+}
+
+.gameZone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-rows: repeat(3,9vw);
+    grid-template-columns: repeat(3,9vw);
+}
+
+.boxAr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+    border: 1px solid black;
+}
+
+.boxAr:hover{
+    background-color: #B0A8B9;
+}
+
+.gameOption{
+    font-size: 0.7rem;
+    margin-left: -2rem;
+}
+
+.reaction img{
+    margin-top: 1rem;
+    margin-left: -2rem;
+    width: 9vw;
+    height: 9vw;
+}
+
+.br-l{
+    border-left: 0;
+}
+
+.br-r{
+    border-right: 0;
+}
+
+.br-t{
+    border-top: 0;
+}
+
+.br-b{
+    border-bottom: 0;
+}
