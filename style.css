@@ -26,8 +26,8 @@ body{
 .container{
     margin-top: 5rem;
     display: grid;
-    grid-template-rows: repeat(3,9vw);
-    grid-template-columns: repeat(3,9vw);
+    grid-template-rows: repeat(3,7vw);
+    grid-template-columns: repeat(3,7vw);
 }
 
 .boxAr{
@@ -43,15 +43,40 @@ body{
 }
 
 .gameOption{
-    font-size: 0.7rem;
+    margin-top: 1rem;
+    font-size: 1vw;
     margin-left: -2rem;
 }
 
 .reaction img{
-    margin-top: 1rem;
-    margin-left: -2rem;
-    width: 9vw;
-    height: 9vw;
+    margin-top: 1vw;
+    margin-left: -4vw;
+    width: 7vw;
+    height: 7vw;
+}
+
+.wrong-bg{
+    background-color: rgb(184, 76, 76);
+}
+
+.reaction{
+    display: none;
+    margin-left: -2vw;
+}
+
+.reset{
+    width: 5vw;
+    height: 3vw;
+    font-size: 1.3vw;
+    text-align: center;
+    border: 0;
+    border-radius: 10%;
+    background-color: #ffc107;
+    margin-left: 2vw;
+}
+
+.reset :hover{
+    background-color: #ffca2c;
 }
 
 .br-l{
