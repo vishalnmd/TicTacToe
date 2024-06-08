@@ -26,15 +26,15 @@ body{
 .container{
     margin-top: 5rem;
     display: grid;
-    grid-template-rows: repeat(3,7vw);
-    grid-template-columns: repeat(3,7vw);
+    grid-template-rows: repeat(3,5rem);
+    grid-template-columns: repeat(3,5rem);
 }
 
 .boxAr{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4vw;
+    font-size: 2rem;
     border: 1px solid black;
 }
 
@@ -44,15 +44,14 @@ body{
 
 .gameOption{
     margin-top: 1rem;
-    font-size: 1vw;
-    margin-left: -2rem;
+    font-size: 1rem;
 }
 
 .reaction img{
-    margin-top: 1vw;
-    margin-left: -4vw;
-    width: 7vw;
-    height: 7vw;
+    margin-top: 1rem;
+    margin-left: -2rem;
+    width: 7rem;
+    height: 7rem;
 }
 
 .wrong-bg{
@@ -61,18 +60,17 @@ body{
 
 .reaction{
     display: none;
-    margin-left: -2vw;
 }
 
 .reset{
-    width: 5vw;
-    height: 3vw;
-    font-size: 1.3vw;
+    width: 4rem;
+    height: 2rem;
+    font-size: 1rem;
     text-align: center;
     border: 0;
     border-radius: 10%;
     background-color: #ffc107;
-    margin-left: 2vw;
+    margin-left: 2rem;
 }
 
 .reset :hover{
