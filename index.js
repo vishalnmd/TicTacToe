@@ -25,7 +25,6 @@ function winnerCall(txt){
     winInfo.style.display ="block";
     winInfo.innerText = txt; 
     reset.innerText = "restart";
-    resetGame();
     winMusic.play();
     document.getElementsByClassName('reaction')[0].style.display = "block";
 }
@@ -61,13 +60,11 @@ function win(){
         });
 
         if(!flag){
-            resetGame();
             turnInfo.style.display = "none";
             winInfo.style.display ="block";
             winInfo.innerText = "DRAW! click restart to play again."; 
             reset.innerText = "restart";
-            winMgameOverMusic.play();
-            document.getElementsByClassName('reaction')[0].style.display = "block";
+            gameOverMusic.play();
         }
     }
 
@@ -105,6 +102,7 @@ function resetGame(){
 //reset button
 reset.addEventListener('click',()=>{
     if(reset.innerText == "restart"){
+        resetGame();
         winInfo.style.display = "none";
         turnInfo.style.display = "block";
         document.getElementsByClassName('reaction')[0].style.display = "none";
