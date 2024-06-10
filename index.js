@@ -1,4 +1,3 @@
-console.log("Welcome to Tic Tac Toe game");
 
 let changeSound = new Audio("ting.mp3");
 let winMusic = new Audio("music.mp3");
@@ -13,14 +12,14 @@ let reset = document.querySelector(".reset");
 
 turnMenu.innerText = turn;
 
+//function which changes the turn of players
 function changeTurn(){
     turn = turn === "X" ? "0" :"X";
-    console.dir(turnMenu);
     turnMenu.innerText = turn;
-    console.log(turn);
     return turn;
 }
 
+// this function displays the winner name, music and animatioin.
 function winnerCall(txt){
     turnInfo.style.display = "none";
     winInfo.style.display ="block";
@@ -31,6 +30,7 @@ function winnerCall(txt){
     document.getElementsByClassName('reaction')[0].style.display = "block";
 }
 
+//checks the condition if any of the winner wins
 function win(){
     if( (boxes[0].innerText==="X" && boxes[1].innerText==="X" && boxes[2].innerText==="X") ||
         (boxes[3].innerText==="X" && boxes[4].innerText==="X" && boxes[5].innerText==="X") ||
@@ -51,7 +51,26 @@ function win(){
     (boxes[0].innerText=="0" && boxes[4].innerText=="0" && boxes[8].innerText=="0") ||
     (boxes[2].innerText=="0" && boxes[4].innerText=="0" && boxes[6].innerText=="0") ){
         winnerCall("0 is the winner");
+    }else{
+        let flag = 0;
+        Array.from(boxes).forEach(element=>{
+            let textArea = element.getElementsByClassName("textArea");
+            if(textArea[0].innerText == "" || textArea[0].innerText == undefined ){
+                flag = 1;
+            }
+        });
+
+        if(!flag){
+            resetGame();
+            turnInfo.style.display = "none";
+            winInfo.style.display ="block";
+            winInfo.innerText = "DRAW! click restart to play again."; 
+            reset.innerText = "restart";
+            winMgameOverMusic.play();
+            document.getElementsByClassName('reaction')[0].style.display = "block";
+        }
     }
+
 }
 
 //game box event
@@ -73,6 +92,7 @@ Array.from(boxes).forEach(element =>{
     });
 });
 
+//function to reset the game
 function resetGame(){
     turn = "X";
     turnMenu.innerText = turn;
@@ -89,6 +109,7 @@ reset.addEventListener('click',()=>{
         turnInfo.style.display = "block";
         document.getElementsByClassName('reaction')[0].style.display = "none";
         winMusic.pause();
+        gameOverMusic.pause();
         reset.innerText = "reset";
     }else{
         resetGame();
